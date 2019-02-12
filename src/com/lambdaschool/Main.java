@@ -16,11 +16,15 @@ public class Main {
         app = injector.getProcess();
         app.sendMessage(myMsg, myAddress);
 
+        System.out.println("\n\n");
+
         injector = new LambdaTextingServiceInjector();
         app = injector.getProcess();
         app.sendMessage(myMsg, myText);
 
-        injector = new LambdaTeletypeServiceInjector()'
+        System.out.println("\n\n");
+
+        injector = new LambdaTeletypeServiceInjector();
         app = injector.getProcess();
         app.sendMessage(myMsg, myAddress);
 

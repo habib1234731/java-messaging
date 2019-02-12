@@ -1,11 +1,6 @@
 package com.lambdaschool;
 
-public class MessageService {
-    public void sendMessage(String message, String address) {
-        System.out.println("For " + address + ": " + message);
-    }
-
-    public String readMessage () {
-        return "Not implemented";
-    }
+public interface MessageService {
+    void sendMessage(String message, String address);
+    String readMessage();
 }

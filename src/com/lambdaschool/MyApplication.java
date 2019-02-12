@@ -1,6 +1,6 @@
 package com.lambdaschool;
 
-public class MyApplication {
+public class MyApplication implements Processor{
 //    private MessageService msgSrv = new MessageService(); // hard coded dependecy
 
     private MessageService msgSrv;
@@ -8,10 +8,15 @@ public class MyApplication {
     public MyApplication(MessageService msgSrv) {
         this.msgSrv = msgSrv;
     }
-
-    public void send(String msg, String receiveAddress) {
-        //rules of message
+    @Override
+    public void sendMessage(String msg, String receiveAddress) {
         msg = msg + "\n *** FOR YOUR EYES ONLY***";
         msgSrv.sendMessage(msg, receiveAddress);
     }
+
+    @Override
+    public String readMessage() {
+        return "Not Implemented";
+    }
+
 }
